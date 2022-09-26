@@ -68,3 +68,12 @@ iframe{
     margin-right:10px;
 }
 
+.button-logout{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: underline;
+    text-align: right;
+    width: 100%;
+}

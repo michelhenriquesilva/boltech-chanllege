@@ -36,7 +36,7 @@ export function ProjectDetails(){
         }finally{
             setLoading(false)
         }
-    }, [])
+    }, [id])
 
     const handlerOnCreate = async ( data: any ) => {
         try{

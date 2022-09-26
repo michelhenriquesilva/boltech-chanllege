@@ -19,7 +19,7 @@ export default function SignUp() {
         confirm_password: yup.string().required('Campo obrigatório'),
     });
 
-    const { handleSubmit, control, setValue, clearErrors } = useForm({
+    const { handleSubmit, control } = useForm({
         resolver: yupResolver(schema)
     });
 

@@ -21,7 +21,6 @@ export function Projects(){
 
     const [projectList, setProjectList] = useState([])
     const [loading, setLoading] = useState<boolean>(false)
-    const [errors, setErrors] = useState<string[]>([])
     
     const getData = useCallback( async () => {        
         try{
