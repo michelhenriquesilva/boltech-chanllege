@@ -40,3 +40,19 @@
     margin-top: 12px;
     font-size: 14px;
 }
+
+.button-group{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.button-group .button, .button-group .form-control{
+    margin: 0;
+    height: 30px;
+}
+
+.button-group .button{
+    width: 60px !important;
+    padding: 0 !important;
+}

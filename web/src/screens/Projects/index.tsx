@@ -21,6 +21,7 @@ export function Projects(){
 
     const [projectList, setProjectList] = useState([])
     const [loading, setLoading] = useState<boolean>(false)
+    const [projectEditName, setProjectEditName] = useState<string>('')
     
     const getData = useCallback( async () => {        
         try{
@@ -55,6 +56,15 @@ export function Projects(){
             alert(err.message)
         }
     }, [getData]) 
+
+    const handleUpdateProjectName = useCallback(async (data: string, taskId: string) => {
+        try{
+            await api.put(`projects/${taskId}`, { name: data})    
+            getData()
+        }catch(err: any){
+            alert(err.message)
+        }
+    }, [getData])
 
 
     useEffect(() => {         
@@ -92,7 +102,14 @@ export function Projects(){
                     <tbody>
                         {projectList.map( (project: any) => (
                             <tr key={project.id}>
-                                <td>{project.name}</td>
+                                <td>
+                                    <div className="button-group">
+                                        <input defaultValue={project.name} onChange={(e) => setProjectEditName(e.target.value)} className="form-control"/>
+                                        <button onClick={() => handleUpdateProjectName(projectEditName, project.id)} className="button button-small">
+                                            editar
+                                        </button>
+                                    </div>
+                                </td>
                                 <td style={{textAlign: 'center'}}>
                                     <button className="button button-small">
                                         <Link to={`projects/${project.id}`}>Detalhes</Link>

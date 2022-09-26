@@ -17,6 +17,7 @@ export function ProjectDetails(){
 
     const [project, setProject] = useState<any>()
     const [loading, setLoading] = useState<boolean>(false)
+    const [taskName, setTaskName] = useState<string>('')
 
     const schema = yup.object({
         name: yup.string().required('Obrigatório')
@@ -71,6 +72,15 @@ export function ProjectDetails(){
         }
     }, [getData]) 
 
+    const handleUpdateTask = useCallback(async (data: string, taskId: string) => {
+        try{
+            await api.put(`tasks/${taskId}`, { name: data})    
+            getData()
+        }catch(err: any){
+            alert(err.message)
+        }
+    }, [getData])
+
 
     useEffect(() => {         
         getData()
@@ -111,7 +121,17 @@ export function ProjectDetails(){
                     <tbody>
                         {(project?.tasks || []).map( (task: any) => (
                             <tr className={task.finished_at ? 'line-through' : ''}>
-                                <td>{task.name}</td>
+                                <td>
+                                    {!Boolean(task.finished_at) && (
+                                        <div className="button-group">
+                                            <input defaultValue={task.name} onChange={(e) => setTaskName(e.target.value)} className="form-control"/>
+                                            <button onClick={() => handleUpdateTask(taskName, task.id)} className="button button-small">
+                                                editar
+                                            </button>
+                                        </div>
+                                    )}
+                                    {Boolean(task.finished_at) && task.name}
+                                </td>
                                 <td>{moment(task.created_at).format('DD/MM/YYYY')}</td>
                                 <td>{task?.finished_at ? `Finalizada ${moment(task.finished_at).format('DD/MM/YYYY')}` : 'Pendente'}</td>
                                 <td style={{textAlign: 'center'}}>
