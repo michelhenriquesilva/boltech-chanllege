@@ -41,10 +41,10 @@ export default class ProjectRepositorySQL implements RepositoryInterface<Project
 
     async update(data: ProjectInterface, id: string): Promise<any> {
         try{
-            const {name, user_id} = data;  
+            const {name} = data;  
             return await connection.one(
-                "UPDATE projects SET name=$2, user_id=$3 WHERE id=$1 RETURNING *",
-                [id, name, user_id]
+                "UPDATE projects SET name=$2 WHERE id=$1 RETURNING *",
+                [id, name]
             )
         }catch(err: any){
             throw err
