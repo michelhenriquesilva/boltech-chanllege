@@ -1,0 +1,73 @@
+{
+  "name": "boltech",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@hookform/resolvers": "^2.9.8",
+    "@testing-library/jest-dom": "5.14.1",
+    "@testing-library/react": "12.0.0",
+    "@testing-library/user-event": "13.2.1",
+    "@types/node": "16.7.1",
+    "@types/react": "17.0.19",
+    "@types/react-dom": "17.0.9",
+    "@types/react-router-dom": "5.3.3",
+    "autoprefixer": "10.x",
+    "axios": "0.21.1",
+    "babel-loader": "8.1.0",
+    "cross-env": "7.x",
+    "delay-cli": "1.1.0",
+    "dotenv": "10.0.0",
+    "formik": "^2.2.9",
+    "moment": "2.29.1",
+    "npm-run-all": "4.x",
+    "postcss": "8.x",
+    "postcss-cli": "8.x",
+    "postcss-preset-env": "6.x",
+    "react": "17.0.2",
+    "react-datepicker": "^4.8.0",
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.36.1",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.3.5",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "run-p react-scripts:start",
+    "build": "run-s react-scripts:build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "react-scripts:start": "delay 5 && react-scripts start",
+    "react-scripts:build": "react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "27.0.1",
+    "@types/styled-components": "^5.1.26",
+    "typescript": "4.4.3"
+  }
+}

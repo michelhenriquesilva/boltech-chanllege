@@ -1,0 +1,20 @@
+Requisitos:
+1. Um usuário pode ter vários projetos
+2. Um usuário só pode acessar seus projetos
+3. Cada projeto pode incluir várias tarefas
+4. Cada tarefa deve ter uma descrição, data de criação e data de término
+5. O usuário precisa ter uma opção simples para marcar as tarefas como concluídas ao acessar a lista de tarefas
+6. Cada tarefa deve ter sua data de término visível como uma dica de ferramenta, se disponível, e alguma maneira visual de identificar
+seu status
+7. Uma tarefa que foi definida como concluída não deve ser editada nem removida
+8. Quando uma tarefa ou projeto é adicionado ou excluído, a página não deve ser totalmente atualizada, para que os usuários tenham uma boa
+experiência
+
+Requisitos não funcionais
+1. A aplicação deve ser escrita em Javascript.
+2. O backend do aplicativo deve ser escrito em Node.js ou GoLang.
+3. As camadas de autenticação e registro devem ser codificadas e não baseadas em módulos pré-existentes (como Passaporte).
+4. Para o frontend podem ser utilizados frameworks javascript (Angular, React, Polymer ou outros).
+5. Os componentes devem ser usados ​para promover maior reutilização de código (componentes de reação ou angulares,
+componentes web ou outras alternativas)
+

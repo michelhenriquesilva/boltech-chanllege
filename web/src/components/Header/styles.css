@@ -1,0 +1,17 @@
+
+.header-nav-container{
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.header-nav-container img{
+    margin: 0px auto;
+    width: 100px;
+}
+.header-nav-container h1{
+    color: #fff;
+    font-size: 20px;
+}

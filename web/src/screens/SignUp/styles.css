@@ -1,0 +1,42 @@
+
+.signup-container{
+    width: 455px;
+    margin: 0 auto;
+}
+
+.signup-container .signup-content{    
+    text-align: center;
+    height: auto;
+    background-color: #fff;
+}
+.signup-container .signup-content img{
+    margin: 40px auto;
+    width: 180px;
+}
+.signup-container .signup-content h1{
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 700;
+    text-transform: none;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 28px;
+}
+
+.signup-container .signup-content form{
+    width: 100%;
+}
+
+.form-control{
+    height: 39px;
+    width: 100%;
+    margin-top: 12px;
+    background-color: #fff !important;
+    border: 1px solid #aaa;
+    text-indent: 12px;
+    border-radius: 4px;
+}
+
+.signup-text{
+    margin-top: 12px;
+    font-size: 14px;
+}
