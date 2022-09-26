@@ -8,9 +8,10 @@ Siga os passos abaixo para configuração do projeto:
 ### Siga as etapas abaixo
 
 1. Entre na pasta do projeto frontend `cd web`
-2. Execute `yarn` ou `npm install`
-3. E depois `yarn start`
-4. Abra a aplicação em `http://localhost:3000`
+2. Utilize o arquivo .env-example e crie um arquivo .env 
+3. Execute `yarn` ou `npm install`
+4. E depois `yarn start`
+5. Abra a aplicação em `http://localhost:3000`
 
 ## Para utilizar o aplicativo
 
